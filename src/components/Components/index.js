@@ -5,6 +5,28 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  flex-direction: column;
+`;
+
+const Grid = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100vw;
+  padding: 10px 10px;
+`;
+
+const Header = styled.div`
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  background: ${(props) => props.background};
+  color: #fff;
+  width: 100%;
+  margin-bottom: auto;
+  padding-left: 2vw;
 `;
 
 const LoginForm = styled.div`
@@ -82,6 +104,64 @@ const Prompt = styled.div`
   padding: 2% 2%;
 `;
 
+const EmpCard = styled.div`
+  width: 22%;
+  height: 40vh;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5vw;
+  margin: 1% 1%;
+  flex-direction: column;
+`;
+
+const Profile = styled.img`
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: #a00fff;
+  padding: 4px 4px;
+`;
+
+const EmpName = styled.h4`
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 3%;
+`;
+
+const EmpMail = styled.p`
+  font-weight: 400;
+  font-size: 13px;
+  color: #8c8c8c;
+`;
+
+const EmpGrid = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: ${(props) => props.width};
+  margin-top: ${(props) => props.marginTop};
+  height: ${(props) => props.height};
+  flex-direction: ${(props) => props.direction};
+  border-radius: ${(props) => props.borderRadius};
+  background: ${props => props.background};
+`;
+
+const CardButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: ${(props) => props.borderRadius};
+  width: ${props => props.width};
+  background: ${props => props.background};
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+`;
+
 export {
   Container,
   LoginForm,
@@ -90,4 +170,12 @@ export {
   LoginFormInput,
   Button,
   Prompt,
+  Header,
+  Grid,
+  EmpCard,
+  Profile,
+  EmpName,
+  EmpMail,
+  EmpGrid,
+  CardButton
 };

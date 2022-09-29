@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Button,
   Container,
@@ -8,16 +8,29 @@ import {
   LoginFormTitle,
   Prompt,
 } from "../Components";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../actions";
 
 export default function Login() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-
   const [msg, setMsg] = useState({});
 
   const dispatch = useDispatch();
+
+  // const isLogged = useSelector((state) => state.loggedIn);
+
+  // useEffect(() => {
+  //   if (document.cookie && !isLogged) {
+  //     const username = document.cookie.split(";")[0].split("=")[1];
+  //     const password = document.cookie.split(";")[1].split("=")[1];
+
+  //     if (username && password) {
+  //       dispatch(login());
+  //       window.location.href = "/"
+  //     }
+  //   }
+  // }, []);
 
   const handleLogin = () => {
     if (userName && password)
@@ -27,6 +40,9 @@ export default function Login() {
           if (json.username === userName && json.password === password) {
             dispatch(login());
             setMsg({ success: "Login succesful" });
+            document.cookie = `username=${userName}`;
+            document.cookie = `password=${password}`;
+            window.location.href = "/"
           } else {
             setMsg({ error: "Invalid Credentials!" });
           }

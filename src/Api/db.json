@@ -2,6 +2,62 @@
   "user": {
     "username": "Karunakar",
     "password": "Password",
-    "name": "Karunakar Pasupala"
-  }
+    "name": "Karunakar Pasupula"
+  },
+  "employees": [
+    {
+      "id": 0,
+      "name": "Harsha",
+      "age": 24,
+      "gender": "M",
+      "designation": "Technical Lead",
+      "profile": "",
+      "mail": "testmail@mailping.com"
+    },
+    {
+      "id": 1,
+      "name": "Karunakar",
+      "age": 30,
+      "gender": "F",
+      "designation": "React Developer",
+      "profile": "",
+      "mail": "testmail@mailping.com"
+    },
+    {
+      "id": 2,
+      "name": "Ramamurthy",
+      "age": 28,
+      "gender": "M",
+      "designation": "Team Developer",
+      "profile": "",
+      "mail": "testmail@mailping.com"
+    },
+    {
+      "id": 3,
+      "name": "Venkatesh",
+      "age": 26,
+      "gender": "F",
+      "designation": "Jnr. Developer",
+      "profile": "",
+      "mail": "testmail@mailping.com"
+    },
+    {
+      "id": 4,
+      "name": "Mallikarjun",
+      "age": 24,
+      "gender": "M",
+      "designation": "Senior Developer",
+      "profile": "",
+      "mail": "testmail@mailping.com"
+    },
+    {
+      "id": 5,
+      "name": "Prasad",
+      "age": 24,
+      "gender": "F",
+      "designation": "Manager",
+      "profile": "",
+      "mail": "testmail@mailping.com"
+    }
+  ]
 }

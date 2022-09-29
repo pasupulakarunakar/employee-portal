@@ -13,4 +13,4 @@ This scripts allows you to run the project both the dummy backend and frontend f
 This script allows you to run only the frontend part of the project and it is not recommended to use this command if you were checking this application.
 
 ### `npm run api`
-This scrips allows you to run only the backend part of the project. This command is also not recommended to use unless until you want to run only the dummy backend api.
+This scripts allows you to run only the backend part of the project. This command is also not recommended to use unless until you want to run only the dummy backend api.
