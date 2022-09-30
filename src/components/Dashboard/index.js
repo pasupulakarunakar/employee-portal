@@ -26,7 +26,7 @@ export default function Dashboard() {
                 id={e.id}
                 name={e.name}
                 mail={e.mail}
-                gender="M"
+                gender={e.gender}
                 designation={e.designation}
               />
             );

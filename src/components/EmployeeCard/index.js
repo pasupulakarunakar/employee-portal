@@ -14,8 +14,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function EmployeeCard(props) {
 
-    const history = useNavigate()
-
   return (
     <React.Fragment>
       <EmpCard>

@@ -4,8 +4,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  flex-direction: column;
+  height: ${(props) => (props.height ? props.height : "100vh")};
+  flex-direction: ${(props) => (props.direction ? props.direction : "column")};
 `;
 
 const Grid = styled.div`
@@ -117,11 +117,13 @@ const EmpCard = styled.div`
 `;
 
 const Profile = styled.img`
-  height: 80px;
-  width: 80px;
+  height: ${(props) => (props.height ? props.height : "80px")};
+  width: ${(props) => (props.width ? props.width : "80px")};
   border-radius: 50%;
   background: #a00fff;
   padding: 4px 4px;
+  margin-top: ${props => props.marginTop};
+  margin-bottom: ${props => props.marginBottom};
 `;
 
 const EmpName = styled.h4`
@@ -146,7 +148,7 @@ const EmpGrid = styled.div`
   height: ${(props) => props.height};
   flex-direction: ${(props) => props.direction};
   border-radius: ${(props) => props.borderRadius};
-  background: ${props => props.background};
+  background: ${(props) => props.background};
 `;
 
 const CardButton = styled.div`
@@ -154,12 +156,32 @@ const CardButton = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: ${(props) => props.borderRadius};
-  width: ${props => props.width};
-  background: ${props => props.background};
+  width: ${(props) => props.width};
+  background: ${(props) => props.background};
   color: black;
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
+`;
+
+const Field = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  margin-left: ${props => props.marginLeft};
+`;
+
+const Label = styled.div`
+  width: 30%;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: right;
+`;
+
+const Value = styled.div`
+  width: 60%;
+  margin-left: 10%;
 `;
 
 export {
@@ -177,5 +199,8 @@ export {
   EmpName,
   EmpMail,
   EmpGrid,
-  CardButton
+  CardButton,
+  Label,
+  Field,
+  Value,
 };

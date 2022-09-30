@@ -4,6 +4,7 @@ import { Login } from "./components";
 import Dashboard from "./components/Dashboard";
 import { useEffect } from "react";
 import { login } from "./actions";
+import EmployeeDetails from "./components/EmployeeDetails";
 
 function App() {
   const dispatch = useDispatch();
@@ -38,6 +39,14 @@ function App() {
             element={
               <PrivateRoute>
                 <Dashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/employee/:id"
+            element={
+              <PrivateRoute>
+                <EmployeeDetails />
               </PrivateRoute>
             }
           />
