@@ -20,7 +20,7 @@ function App() {
         dispatch(login());
       }
     }
-  }, []);
+  }, [isLogged, dispatch]);
 
   function PrivateRoute({ children }) {
     if (isLogged) {

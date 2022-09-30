@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {
   Container,
-  EmpName,
   Field,
   Label,
   Profile,
@@ -11,7 +10,7 @@ import {
 import Male from "../../assets/person-male.png";
 import Female from "../../assets/person-female.png";
 
-export default function EmployeeDetails(props) {
+export default function EmployeeDetails() {
   const empId = useParams().id;
   const [emp, setEmp] = useState();
 
@@ -19,7 +18,7 @@ export default function EmployeeDetails(props) {
     fetch("http://localhost:3000/employees")
       .then((res) => res.json())
       .then((json) => setEmp(json.find((item) => parseInt(empId) === item.id)));
-  }, [emp]);
+  }, [emp, empId]);
 
   return (
     <Container>

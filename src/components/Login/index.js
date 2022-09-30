@@ -18,20 +18,6 @@ export default function Login() {
 
   const dispatch = useDispatch();
 
-  // const isLogged = useSelector((state) => state.loggedIn);
-
-  // useEffect(() => {
-  //   if (document.cookie && !isLogged) {
-  //     const username = document.cookie.split(";")[0].split("=")[1];
-  //     const password = document.cookie.split(";")[1].split("=")[1];
-
-  //     if (username && password) {
-  //       dispatch(login());
-  //       window.location.href = "/"
-  //     }
-  //   }
-  // }, []);
-
   const handleLogin = () => {
     if (userName && password)
       fetch("http://localhost:3000/user")

@@ -9,7 +9,6 @@ import {
 } from "../Components";
 import Male from "../../assets/person-male.png";
 import Female from "../../assets/person-female.png";
-import { useNavigate } from "react-router-dom";
 
 
 export default function EmployeeCard(props) {
@@ -17,9 +16,9 @@ export default function EmployeeCard(props) {
   return (
     <React.Fragment>
       <EmpCard>
-        <Profile src={props.gender === "M" ? Male : Female} />
-        <EmpName>{props.name.toUpperCase()}</EmpName>
-        <EmpMail>{props.mail}</EmpMail>
+        <Profile src={props?.gender === "M" ? Male : Female} />
+        <EmpName>{props?.name?.toUpperCase()}</EmpName>
+        <EmpMail>{props?.mail}</EmpMail>
 
         <EmpGrid marginTop="5%" height="20%" width="90%">
           <EmpGrid
@@ -38,7 +37,7 @@ export default function EmployeeCard(props) {
                 fontWeight: "500"
               }}
             >
-              {props.designation}
+              {props?.designation}
             </p>
           </EmpGrid>
           <EmpGrid
